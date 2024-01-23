@@ -16,7 +16,7 @@ st.set_page_config(
 def sidebar():
     st.sidebar.markdown(''' # <h1 class="si-title">AgriStat 🚜</h1>''', unsafe_allow_html=True)
     navItems = ["🏡 Home", "💹 Area and Production by State", "💹 Crop Yield Comparison", "👨‍💻 About "]
-    navItemsKey = ['home', 'item1', 'item2', 'About']
+    navItemsKey = ['home', 'item1', 'item2', 'abt']
 
     for i in range(0, len(navItems)):
         # if st.sidebar.markdown(f'''<div class="si-item">{navItems[i]}</div>''', unsafe_allow_html=True):
@@ -28,8 +28,8 @@ def sidebar():
             </script>
         """
         st.markdown(script, unsafe_allow_html=True)
-        # link_html = f'''[<div class="si-item">{navItems[i]}</div>]('#{navItemsKey[i]}')'''
-        link_html = f'''<div class="si-item">{navItems[i]}</div>'''
+        link_html = f'''[<div class="si-item">{navItems[i]}</div>](#{navItemsKey[i]})'''
+        # link_html = f'''<div class="si-item">{navItems[i]}</div>'''
         st.sidebar.markdown(link_html, unsafe_allow_html=True) 
     st.sidebar.markdown('''<hr>''', unsafe_allow_html=True)
     st.sidebar.markdown('''<small>[AgriStat](#git)  | Jan 2024 | [Dinesh J V](#dinesh)</small>''', unsafe_allow_html=True)
@@ -130,7 +130,6 @@ def main():
         st.markdown("<h2 class='subheader'>Welcome to AgriStat - Transforming Agriculture with Data Visualization. Explore the power of insightful visualizations to make informed decisions and revolutionize your approach to farming and research.</h2>",  unsafe_allow_html=True)
 
     with st.container():
-        
         st.markdown("<div id='item1'>", unsafe_allow_html=True)
         st.subheader("Area and Production by State")
         st.markdown("<div class='div-block'>", unsafe_allow_html=True)
